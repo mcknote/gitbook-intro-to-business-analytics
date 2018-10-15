@@ -22,7 +22,7 @@ If you do want to explore the content in Python or R, please make sure to set up
 
 1. Download and install [Anaconda _Python 3.7_](https://www.anaconda.com/download/) following the instructions on [conda.io](https://conda.io/docs/user-guide/install/index.html). It will include most of the tools and packages required for data analytics work.
 2. Launch the Anaconda Navigator. In the Home tab are the available tools, and in the Environments are the available environments and packages.
-3. \(Optional\) It is recommended to set up your own environment to manage each project or task, as explained in great detail by Gergely Szerovay [here](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c). You may just use the default "root" environment to walk through this book.
+3. \(Optional\) It is recommended to set up your own environment to manage each project or task, as explained in great detail by Gergely Szerovay [here](https://medium.freecodecamp.org/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c). You may just use the default "root" environment to walk through examples this book.
 4. Launch **spyder** and **notebook** from the Home tab. Both of them can be used to execute the code mentioned in this book. 
 5. For the first-timers, the official documentation [_Jupyter Notebook Basics_](http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb) is a great resource to help you get started. The walkthrough in this book will generally follow the codeblock-documentation format in the notebook.
 
