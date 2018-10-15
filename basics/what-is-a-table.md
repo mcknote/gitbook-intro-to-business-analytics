@@ -243,8 +243,18 @@ Luckily, most \(if not all\) of the data analytics tools support importing data 
 ```python
 import pandas as pd
 
+# suppose we already saved the example above as a csv file called table.csv
+
 # read the table.csv in the working directory
 table_4 = pd.read_csv('table.csv')
+
+# Take a look at the table
+print(table_4)
+# Output:
+#    Name  Score
+# 0  John    100
+# 1  Mike     88
+# 2   Ali     94
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
