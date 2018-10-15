@@ -40,20 +40,26 @@ For now, just keep in mind that it is better to leverage the existing headers in
 | Row Index | Name | Score |
 | :--- | :--- | :--- |
 | 1 | John | 100 |
-| 2 | Mike | 88 |
+| **2** | **Mike** | 88 |
 | 3 | Ali | 94 |
 {% endtab %}
 
 {% tab title="2 - Slide the table" %}
-
+| Name | Score |
+| :--- | :--- |
+| John | 100 |
 {% endtab %}
 
 {% tab title="3. Find the index" %}
-
+| Name | **Score** |
+| :--- | :--- |
+| John | **100** |
 {% endtab %}
 
-{% tab title="Slice the table" %}
-
+{% tab title="4. Slice the table" %}
+| Score |
+| :--- |
+| 100 |
 {% endtab %}
 {% endtabs %}
 
