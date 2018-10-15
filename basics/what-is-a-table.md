@@ -249,7 +249,7 @@ table_4 = pd.read_csv('table.csv')
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Separation of Concerns
+### Separation of Concerns and the Structure
 
 In a broader sense, the idea of creating separate external file is related to a design principle in computer science called [Separation of Concerns \(SoC\)](https://en.wikipedia.org/wiki/Separation_of_concerns). Based on SoC, we should always separate a program into dinstinct, single-purpose sections that address separate concern. Similarly, we should also separate the analytical process into distinct steps with its own set of tools to ensure best efficiencies.
 
