@@ -39,8 +39,8 @@ For now, just keep in mind that it is better to leverage the existing headers in
 {% tab title="1. Find the index" %}
 | Row Index | Name | Score |
 | :--- | :--- | :--- |
-| 1 | John | 100 |
-| **2** | **Mike** | 88 |
+| **1** | **John** | 100 |
+| 2 | Mike | 88 |
 | 3 | Ali | 94 |
 {% endtab %}
 
@@ -62,4 +62,49 @@ For now, just keep in mind that it is better to leverage the existing headers in
 | 100 |
 {% endtab %}
 {% endtabs %}
+
+It is worth noting that in some packages, the end product from the fourth step is a \(1,1\) table, not the value itself, and would require an extra step to extract the data. But except the difference in data types, this is the standard way to locate a cell in a table - first get the index in one dimension, and that use that index to slice the table.
+
+> **In case you're wondering: Table/Matrix Notation \(r,c\)**
+>
+> When we refer to the size of a table, we will always the number of rows first, and then the number of columns. It is a convention from matrix, and the notation determines whether certain calculations are available between two matrices.
+>
+> For example, we can multiply a \(1,**4**\) matrix with a \(**4**,1\) matrix, and get a \(1,1\) matrix; we can also multiply a \(4,**1**\) matrix by a \(**1**,4\) matrix and get a \(4,4\) matrix. But we can't do this with two \(1,4\) matrices, we can add or subtract them instead. Tables adopt this notation.
+
+### List
+
+We can of course use the same process to select multiple rows or columns. If I want to focus on Mike and Ali's score, either to compare or to calculate the average, I can first find the indexes of their rows, and then slice the table using those indexes.
+
+{% tabs %}
+{% tab title="1. Find the index" %}
+| Row Index | Name | Score |
+| :--- | :--- | :--- |
+| 1 | John | 100 |
+| **2** | **Mike** | 88 |
+| **3** | **Ali** | 94 |
+{% endtab %}
+
+{% tab title="2 - Slide the table" %}
+| Name | Score |
+| :--- | :--- |
+| Mike | 88 |
+| Ali | 94 |
+{% endtab %}
+
+{% tab title="3. Find the index" %}
+| Name | **Score** |
+| :--- | :--- |
+| Mike | **88** |
+| Ali | **94** |
+{% endtab %}
+
+{% tab title="4. Slice the table" %}
+| Score |
+| :--- |
+| 100 |
+| 94 |
+{% endtab %}
+{% endtabs %}
+
+Again, the end product we get from step four can be a \(2,1\) table, or a list with two elements. 
 
