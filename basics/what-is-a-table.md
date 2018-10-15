@@ -275,3 +275,7 @@ A violation of SoC might sometimes be the reason why an Excel workbook or a scri
 
 As we will gain more and more flexibility and capacity to build amazing processes around our data, it is important to keep the structured mindset: using the table \(and other data types\) to structure the data, using different steps to structure and processes and their toolsets, and using different concepts to structure the ever-changing landscape of business analytics.
 
+Thanks for reading through this lengthy note, and I wish the best for your journey in business analytics.
+
+Jimmy
+
