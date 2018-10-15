@@ -251,5 +251,9 @@ table_4 = pd.read_csv('table.csv')
 
 ### Separation of Concerns
 
-In a broader sense, this idea is related to a design principle in computer science called [Separation of Concerns \(SoC\)](https://en.wikipedia.org/wiki/Separation_of_concerns). SoC encourages  
+In a broader sense, the idea of creating separate external file is related to a design principle in computer science called [Separation of Concerns \(SoC\)](https://en.wikipedia.org/wiki/Separation_of_concerns). Based on SoC, we should always separate a program into dinstinct, single-purpose sections that address separate concern. Similarly, we should also separate the analytical process into distinct steps with its own set of tools to ensure best efficiencies.
+
+A violation of SoC might sometimes be the reason why an Excel workbook or a script is so difficult to understand - because everything is just tangled \(or coupled\) together. A better way is to keep the processes \(the verbs, the excel formula\) separate from the data \(the nouns, the actual data\). We will talk more about it when we start to manipulate the data.
+
+As we will gain more and more flexibility and capacity to build amazing processes around our data, it is important to keep the structured mindset: using the table \(and other data types\) to structure the data, using different steps to structure and processes and their toolsets, and using different concepts to structure the ever-changing landscape of business analytics.
 
