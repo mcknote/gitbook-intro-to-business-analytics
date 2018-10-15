@@ -1,6 +1,6 @@
 ---
 description: >-
-  As an interface between user and data, table is one of the most fundamental
+  As an interface between user and data, table is one of the fundamental
   concepts in business analytics.
 ---
 
@@ -184,7 +184,7 @@ It turns out there are multiple ways to help us achieve this goal. One common wa
 2. Structure the data in a consumable way to the data frame function
 3. Apply the data frame function to return the object to our variable
 
-So an example in Python will be as follows. A little bit explanation for line 2: as Python is a versatile tool, we usually launch it without any additional packages and only import the necessary ones. Here we import the [Python Data Analysis Library](https://pandas.pydata.org), coded as **pandas**, into the console under the name "pd".
+So an example in Python will be as follows. A little bit explanation for line 2: as Python is a versatile tool, we usually launch it without any additional packages and only import the necessary ones. Here we import the [_Python Data Analysis Library_](https://pandas.pydata.org), coded as **pandas**, into the console under the name "pd".
 
 {% code-tabs %}
 {% code-tabs-item title="table-3.py" %}
