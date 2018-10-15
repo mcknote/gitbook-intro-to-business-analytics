@@ -230,7 +230,7 @@ However, keep in mind that data analytics skills don't always equate to programm
 >
 > Tibble is a data-frame-like object in R that aims to update some of the old conventions in a data frame. In terms of structure, a tibble is basically the same as a data frame, both with columns, rows, and column and row names. A detailed walkthough of tibble and the comparison of the two can be read in [_R for Data Science_](http://r4ds.had.co.nz/tibbles.html).
 
-## Creating a Table for Hundreds of Instances
+## Creating a Table Including Hundreds of Instances
 
 Finally, which tool should we use if we want to, for example, document the scores for hundreds of students? The best way is to use the document application such as Excel or other reporting tools at the beginning, and then load that data into the programming console.
 
