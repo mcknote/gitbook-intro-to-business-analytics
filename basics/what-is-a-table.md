@@ -6,7 +6,7 @@ description: >-
 
 # What Is a Table?
 
-The very first thing I want to talk about is table. Table is so common, so powerful that it appears in every level of the world of data, yet it is also the first thing to know to master business analytics. No matter which tool you are using, understanding the structure and the relationship of a table, from how to select a single cell in a table, to how to apply changes to rows and columns, will help you reach the best practices as soon as possible. So let's take a step back and review this question: _What is a table_?
+The very first thing we will talk about is table. Table is so common, so powerful that it appears in every level of the world of data, yet it is also the first thing to know to master business analytics. No matter which tool you are using, understanding the structure and the relationship of a table, from how to select a single cell in a table, to how to apply changes to rows and columns, will help you reach the best practices as soon as possible. So let's take a step back and review this question: _What is a table_?
 
 ## Table Is a 2D Container of Data
 
