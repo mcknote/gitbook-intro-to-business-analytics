@@ -6,5 +6,5 @@
 ## Basics
 
 * [What Is a Table?](basics/what-is-a-table.md)
-* [Selecting Data In a Table](basics/selecting-data-in-a-table.md)
+* [Accessing Data In a Table](basics/selecting-data-in-a-table.md)
 
