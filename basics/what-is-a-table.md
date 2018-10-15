@@ -265,7 +265,7 @@ In a broader sense, the idea of creating separate external file is related to a 
 
 A violation of SoC might sometimes be the reason why an Excel workbook or a script is so difficult to understand - because everything is just tangled \(or [_coupled_](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29)\). A better way is to keep the processes \(the verbs, the excel formula\) separate from the data \(the nouns, the actual data\). We will talk more about the process when we start to manipulate the data.
 
-**An SoC Implementation in Excel**
+**An Implementation of SoC in Excel**
 
 | Sheet | Step | Function |
 | :--- | :--- | :--- |
