@@ -151,9 +151,13 @@ We can see from the first two steps that after selecting multiple elements in a 
 
 ## How to _Find_ an Index?
 
-I hope the indexing and slicing process makes sense, except you might be wondering _how exactly do we find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table? To fill in this gap, let's talk about boolean operators, and how we can also use a list of boolean elements to slice lists and tables.
+I hope the indexing and slicing process makes sense so far, except you might be wondering _how exactly do we find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table? To fill in this gap, let's talk about boolean expression, and how we can also use a list of boolean data to slice lists and tables.
 
-### Boolean Operators
+### True or False
 
-Boolean operators are the 
+For those of you who have used Excel formula, especially `IF(cond, act_true, act_false)`, **boolean expression** is nothing more than a condition you would put in the formula, and the `TRUE` or `FALSE` response is exactly the **boolean data**. 
+
+For example, in Excel `=(3>5)` is a boolean operator that checks whether 3 is greater than 5, and the response `FALSE` would be a boolean data. If we want to evaluate multiple conditions at once like using `=AND((10>7), (11>9))`, the `AND(cond1, cond2,...)` function is called a **boolean operator**, and of course the response `TRUE` is another boolean data.
+
+We can also use boolean operators to conbine multiple boolean data. 
 
