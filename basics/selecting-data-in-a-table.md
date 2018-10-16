@@ -108,7 +108,7 @@ We can of course use the same process to select multiple rows or columns. If I w
 
 Again, depending on the data types, the end product we get from step four can be a \(2,1\) table, or a **list** with two elements. List is also a data structure that we can use to store and access data, except unlike table, it is not always two-dimensional; it is usually one-demensional as in this example, or can be nested into multi-dimensional. For now let's focus on the two-element list we got.
 
-The way to index and slice a list is exactly the same as the index approach to our table: we first _find the index_ of the element\(s\), and then _slice the list_ using the index.
+The way to index and slice a list is exactly the same as the index approach to our table: we first _find the index_ of the element\(s\), and then _slice the list_ using the index. In the example below, the first two steps are to slice the list using both indexes, and the last two steps using only the first index.
 
 {% tabs %}
 {% tab title="1. Find the index" %}
@@ -139,5 +139,11 @@ The way to index and slice a list is exactly the same as the index approach to o
 {% endtab %}
 {% endtabs %}
 
+We can see from the first two steps that after selecting multiple elements in a list, we will still get a list; while selecting only element will get us the value itself. This is also a way to extract data from the \(1,1\) table object.
 
+> **In case you're wondering: Index in Python and R**
+>
+> Index system is one of the fundamental differences between R and Python. Launched as a statistical language, R uses natural numbers as its index that starts with 1, while Python, a rather classical programming language, uses [non-negative integers](https://en.wikipedia.org/wiki/Integer_%28computer_science%29) as its index that starts with 0.
+>
+> So to access the first object in a list, in Python you would use 0 as the index, while in R you would use 1 as the index. We will cover the advanced indexing soon.
 
