@@ -41,7 +41,7 @@ After understanding the two approaches to find a data, we can further break the 
 {% tab title="1. Find the index" %}
 | Row Index | Name | Score |
 | :--- | :--- | :--- |
-| **1** | **John** | 100 |
+| **1** | **John** | **100** |
 | 2 | Mike | 88 |
 | 3 | Ali | 94 |
 {% endtab %}
@@ -82,8 +82,8 @@ We can of course apply the same process to select multiple rows or columns. If w
 | Row Index | Name | Score |
 | :--- | :--- | :--- |
 | 1 | John | 100 |
-| **2** | **Mike** | 88 |
-| **3** | **Ali** | 94 |
+| **2** | **Mike** | **88** |
+| **3** | **Ali** | **94** |
 {% endtab %}
 
 {% tab title="2 - Slide the table" %}
@@ -148,4 +148,12 @@ We can see from the first two steps that after selecting multiple elements in a 
 > Index system is one of the fundamental differences between R and Python. Launched as a statistical language, R uses natural numbers as its index that starts with 1, while Python, a rather classical programming language, uses [non-negative integers](https://en.wikipedia.org/wiki/Integer_%28computer_science%29) as its index that starts with 0.
 >
 > So to access the first object in a list, in Python you would use 0 as the index, while in R you would use 1 as the index. We will cover the advanced indexing soon.
+
+## How to _Find_ an Index?
+
+I hope the indexing and slicing process makes sense, except you might be wondering _how exactly do we find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table? To fill in this gap, let's talk about boolean operators, and how we can also use a list of boolean elements to slice lists and tables.
+
+### Boolean Operators
+
+
 
