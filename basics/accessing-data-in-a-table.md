@@ -216,17 +216,15 @@ Simply put, the way the computer finds the index is to first evaluate the condit
 
 | Step | Action | Name | Score |
 | :--- | :--- | :--- | :--- |
-| 0 | Index the headers\* | 1 | 2 |
+| 0 | Index the headers | 1 | 2 |
 | 1 | Compare each header with "Name" | **True** | False |
 | 2 | Filter the index | **1** | \(Null\) |
-
-_\*Index usually doesn't require manual assignment_
 
 This is the process under the hood that connects the name with the index, and I use this trick a lot to design processes. To illustarte how step 1 and 2 happened, let's talk about boolean expression, and how we can also use a list of boolean data to slice lists and tables.
 
 ### True and/or False
 
-For those of you who have used Excel formula, especially `IF(cond, act_true, act_false)`, **boolean expression** is nothing more than a condition you would put in the formula, and the `TRUE` or `FALSE` response is exactly the **boolean data**. 
+For those of you who have used Excel formula, especially `IF(cond, act_true, act_false)`, **boolean expression** is nothing more than a condition you put in the formula, and the `TRUE` or `FALSE` response is exactly the **boolean data \(type\)**. 
 
 For example, in Excel `=(3>5)` is a boolean operator that checks whether 3 is greater than 5, and the response `FALSE` would be a boolean data. If we want to evaluate multiple conditions at once like using `=AND((10>7), (11>9))`, the `AND(cond1, cond2,...)` function is called a **boolean operator**, and of course the response `TRUE` is another boolean data.
 
