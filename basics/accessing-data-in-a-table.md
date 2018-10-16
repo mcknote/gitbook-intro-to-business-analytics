@@ -153,7 +153,7 @@ We can see from the first two steps that after selecting multiple elements in a 
 
 I hope the indexing and slicing process makes sense so far, except you might be wondering _how exactly do we find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table? To fill in this gap, let's talk about boolean expression, and how we can also use a list of boolean data to slice lists and tables.
 
-### True or False
+### True and/or False
 
 For those of you who have used Excel formula, especially `IF(cond, act_true, act_false)`, **boolean expression** is nothing more than a condition you would put in the formula, and the `TRUE` or `FALSE` response is exactly the **boolean data**. 
 
