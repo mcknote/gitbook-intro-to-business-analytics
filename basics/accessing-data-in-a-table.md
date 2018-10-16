@@ -153,7 +153,7 @@ We can see from the first two steps that after selecting multiple elements in a 
 
 Although understanding the process of slicing and indexing can seem overwhelming, it is truly how we navigate through a \(3,2\), \(30, 20\) or even a \(3000, 2000\) table. When the data grows into _big data_, we can barely use the arbitrary locator like `B2` to find the data we want - we need to leverage the row names and column names. 
 
-And trust me, once you get used to this method, it will feel much more intuitive to locate the data using the name approach. The very moment you start wondering "_What is John's score?_", you will already be thinking about slicing the data. This second nature will apply to Excel, R, Python, SQL, and pretty much every data analytics tool you will encounter.
+And trust me, once you get used to this method, it will feel much more intuitive to locate the data using the name approach. The very moment you start wondering "_What is John's score?_", you will already be slicing the data. This second nature will apply to Excel, R, Python, SQL, and pretty much every data analytics tool you will encounter.
 
 ## Slicing a Table in Excel
 
