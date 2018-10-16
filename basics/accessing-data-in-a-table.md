@@ -155,9 +155,34 @@ Although understanding the process of slicing and indexing can seem overwhelming
 
 And trust me, once you get used to this method, it will feel much more intuitive to locate the data using the name approach. The very moment you start wondering "_What is John's score?_", you will already be thinking about slicing the data. This second nature will apply to Excel, R, Python, SQL, and pretty much every data analytics tool you will encounter.
 
+## Slicing a Table in Excel
+
+Based on the knowledge so far, we can already start slicing a table in Excel. Just a heads-up: Excel table offers an amazing support for slicing by column name, but it doesn't fully support slicing by index. We will explain this phenomenon and discuss some alternatives below.
+
+### Slicing by Column Name
+
+Once a range is converted into a table, whenever you start to reference the whole column, Excel will automatically convert the range into a structured reference. So if I want to calculate the average score from this midterm exam, I can just select the whole range as follows:
+
+![Excel automatically converts range into structure reference ](../.gitbook/assets/accessing-data-in-a-table-slicing-in-excel-1.png)
+
+Let's take a closer look at what Excel has done for us. Inside the `AVERAGE()` formula, the structure reference says `Midterm[Score]`, in which `Midterm` is the table name, and `Score` the column name. It doesn't matter on which sheet or cells our table is placed. As long as we call the table `Midterm`, this will be the only table where the data is referenced. This also implies that both the table name and the column name have to unique.
+
+This structure reference can also be expanded to include multiple columns. Let's say there is an optional second exam for anyone who wants to raise his or her score even higher. If we want to count the number of scores out of these two exams, we can also select the range that contains all of them.
+
+![The structure reference can be used to include multiple columns](../.gitbook/assets/accessing-data-in-a-table-slicing-in-excel-2.png)
+
+  
+We can see from the example above that the structure reference is now `Midterm[[Score1]:[Score2]]`, which means we are selecting the data from column `Score 1` to `Score 2` in the `Midterm` table. 
+
+As I said, Excel did an amazing job in slicing by column name. The auto-completion feature makes it very easy to create and modify the structure references. We can now only focus on the table itself, regardless of which alphanumerical location each cell is located... if we are only dealing with columns.
+
+### Slicing by Row Name
+
+Natively, Excel table doesn't support slicing by row name, and to be fair, this can be a result from the fact that assigning _unique_ row names is not a very common practice. 
+
 ## How to _Find_ an Index?
 
-I hope the indexing and slicing process makes sense so far, except you might be wondering _how exactly do we find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table?
+I hope the indexing and slicing process makes sense so far, except you might be wondering _how exactly does the program find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table?
 
 ### Evaluating and Filtering
 

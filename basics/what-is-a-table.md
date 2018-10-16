@@ -33,7 +33,7 @@ So if I want to use a table to document my favorite snacks, it will looks as fol
 
 > **In case you're wondering: Column** _**No.**_
 >
-> You might be wondering "Why don't we just assign the _Item_ column as the row names"? Actually we could and that would increase the readability of this table a little bit. Here I decided to assign a separate column to illustrate the importance of the row numbers, and I will explain later why it might be a good idea sometimes.
+> The reason that we assign serial numbers instead of Item as the row names is to create an unique row identifier \(also known as **row index** or **primary key**\) for each instance. In the next chapter [Accessing Data In a Table](accessing-data-in-a-table.md#slicing-by-row-name) we will start to see the importance of this practice.
 
 ### Difference between Rows and Columns
 
