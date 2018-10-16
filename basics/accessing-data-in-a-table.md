@@ -263,3 +263,23 @@ Similarly, if we want to select both _Name_ and _Score_, we can jsut tweak the b
 >
 > This is obviously not the case with Python or R, as the equality sign can appear anywhere in the vast script. Therefore, both Python and R use double equality sign `==` for equality evaluation, and `=` exclusively for variable or argument assignment. The other operators: `>`, `<`, `>=`, `<=`, are exactly the same.
 
+### Filtering the Index
+
+With the boolean list generated, this step should be fairly straightforward - we just have to filter the index whose corresponding evaluation result is true. This can be easily done in an Excel table.
+
+![Using the IF function to filter results](../.gitbook/assets/accessing-data-in-a-table-filtering.png)
+
+In the screenshot we can see that by using a row-based `IF()` function, we can easily filter the index column by the boolean column. If the boolean is `TRUE`, the cell will reference the `Index` column on the same row; if not it will return an empy string. We can finally use the list of indexes to access the data in a table. Hurray!
+
+> **In case you're wondering: Vectorization**
+>
+> Besides checking each element one by one, we could also leverage _vectorization_, also known as [_array programming_](https://en.wikipedia.org/wiki/Array_programming), to achieve extremely faster calculation. In our example, we may use matrix multiplication to improve the efficiency.
+>
+> The underlying idea is that since true and false can be calculated as 1 and 0, and any number multiplied by 0 will be 0, so we may construct the index \(2,1\) and boolean \(2,1\) matrices in a way that when they multiply, we will get a \(2,1\) matrix with only the valid index left. A detailed walkthough is as follows. 
+>
+> 1. Transpose the index matrix into a \(1,2\) matrix
+> 2. Concatenate the boolean matrix by itself into a \(2,2\) matrix
+> 3. Multiply the two matrices, \(1,2\) x \(2,2\). The result will be a \(1,2\) matrix.
+>
+> The slicing or indexing functions should already be optimized in this way, so don't be worried if you don't feel familiar. Just keep in mind that code optimization is an ongoing effort, and there can be some better but less straightforward ways in processing the data.
+
