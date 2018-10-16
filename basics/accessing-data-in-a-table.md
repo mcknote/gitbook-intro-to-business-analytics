@@ -210,9 +210,7 @@ Once you start using table and structure references, it is very easy master the 
 
 I hope the indexing and slicing process makes sense so far, except you might be wondering _how exactly does the program find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table?
 
-### Evaluating and Filtering
-
-Simply put, the way the computer finds the index is to first evaluate the condition against each data point, and then filter the index that fit the condition. Following is an example how the computer would find "Name" among the headers.
+Simply put, the way a computer finds the index is to first **evaluate** the condition against each data point, and then **filter** the index that fit the condition. Following is an example how the computer would find "Name" among the headers.
 
 | Step | Action | Name | Score |
 | :--- | :--- | :--- | :--- |
@@ -220,27 +218,48 @@ Simply put, the way the computer finds the index is to first evaluate the condit
 | 1 | Compare each header with "Name" | **True** | False |
 | 2 | Filter the index | **1** | \(Null\) |
 
-This is the process under the hood that connects the name with the index, and I use this trick a lot to design processes. To illustarte how step 1 and 2 happened, let's talk about boolean expression, and how we can also use a list of boolean data to slice lists and tables.
+This is the process that connects the name with the index, and I use this trick a lot to design processes. Let's illustrate step 1 and 2 in greater details below.
 
-### True and/or False
+### Evaluating the Condition
 
-For those of you who have used Excel formula, especially `IF(cond, act_true, act_false)`, **boolean expression** is nothing more than a condition you put in the formula, and the `TRUE` or `FALSE` response is exactly the **boolean data \(type\)**. 
+To know which specific data fits our condition, the best way is compare the condition against each data point, and record whether the reponse is true or false. So if we want to know which header is _Name_, we would go through each header and check whether it equals to _Name_.
 
-For example, in Excel `=(3>5)` is a boolean operator that checks whether 3 is greater than 5, and the response `FALSE` would be a boolean data. If we want to evaluate multiple conditions at once like using `=AND((10>7), (11>9))`, the `AND(cond1, cond2,...)` function is called a **boolean operator**, and of course the response `TRUE` is another boolean data.
+In programming, the condition we set is called a **boolean expression**, and it will generate a **boolean data**, which is just a fancy name for the true or false we are looking for. We may also use **boolean operators**, such as _and_ and _or_, to combine multiple boolean expression into one. Following is an example using the Excel-style formula.
 
-### Conditions
+| Boolean Expression 1 | Boolean Operator | Boolean Expression 2 | Boolean Data |
+| :--- | :--- | :--- | :--- |
+| \(3&gt;5\) | - | - | FALSE |
+| \(10&gt;7\) | - | - | TRUE |
+| \(3&gt;5\) | AND | \(10&gt;7\) | FALSE |
+| \(3\*5=15\) | OR | \(2\*3=7\) | TRUE |
 
-We can use the boolean operator to combine multiple boolean data as a single condition, as we did with `=AND((10>7), (11>9))`. There are two boolean operators, `AND()` and `OR()`, and three unique combinations between `TRUE` and `FALSE`. They form six types of condition as shown in the following table.
+Naturally, we can combine as many boolean expressions as we want using the boolean operators. With two kinds of boolean operators and three unique combinations between true and false, there are six possible ways to combine two boolean data.
 
-**The Combination of Boolean Data**
+**Combining Two Boolean Data**
 
-| Data | Operator: And | Operator: Or |
+| Boolean Data | Operator: And | Operator: Or |
 | :--- | :--- | :--- |
 | True, True | True | True |
 | True, False | False | True |
 | False, False | False | False |
 
-Finally, we can **negate** a condition. In Excel we can use the function `=NOT()` to flip a boolean response. Using negation can help us adjust the condition. For example, if we want to execute a code when neither of the condition is true, we can just write `=NOT(OR(cond1, cond2))`, more succinct than its equivalence `=(AND(NOT(cond1), NOT(cond2)))`.
+Finally, we can **negate** a condition. For example in Excel we can use the function `=NOT()` to flip a boolean response. 
 
+Understanding these rules can help us generate a list of boolean data to filter another list \(at the same length, of course\). Now we can specify the header searching process into following steps, with Excel-style formula:
 
+1. Construct a boolean expression: `(h="Name")`
+2. For each element in the header `["Name", "Score"]`, evaluate it with the expression
+3. Generate the boolean list: `[TRUE, FALSE]`
+
+Similarly, if we want to select both _Name_ and _Score_, we can jsut tweak the boolean expression.
+
+1. Construct a boolean expression: `OR((h="Name"), (h="Score"))`
+2. For each element in the header `["Name", "Score"]`, evaluate it with the expression
+3. Generate the boolean list: `[TRUE, TRUE]`
+
+> **In case you're frowning: The Equality Sign "="**
+>
+> In Excel, the formula use single equality sign `=` for both variable assignment and equality evaluation, because only the first one is used for variable assignment, and the rest are all treated as equality evalution.
+>
+> This is obviously not the case with Python or R, as the equality sign can appear anywhere in the vast script. Therefore, both Python and R use double equality sign `==` for equality evaluation, and `=` exclusively for variable or argument assignment. The other operators: `>`, `<`, `>=`, `<=`, are exactly the same.
 
