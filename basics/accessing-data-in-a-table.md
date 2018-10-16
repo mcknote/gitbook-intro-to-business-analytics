@@ -178,7 +178,33 @@ As I said, Excel did an amazing job in slicing by column name. The auto-completi
 
 ### Slicing by Row Name
 
-Natively, Excel table doesn't support slicing by row name, and to be fair, this can be a result from the fact that assigning _unique_ row names is not a very common practice. 
+Natively, Excel table doesn't support true slicing by row name, and my wild guess is that this is because assigning _unique_ row names to a table is not a very common practice. 
+
+For example, in our score table, there is no unique row identifier if we add another John or Ali. This is why we should always assign unique, serial row names to the instances, as explained in [_In case you're wondering: Column No._](what-is-a-table.md#table-is-a-2d-container-of-data) __As for now, the _unstructured_ nature of rows or instances in an Excel table makes it hard to apply slicing by row name.
+
+However, Excel table does provide a neat `#ThisRow` or `@` specifier to reference objects on the same row. Suppose we want to calculate the highest score for each student as follows:
+
+![The current row can be specified as @](../.gitbook/assets/accessing-data-in-a-table-slicing-in-excel-3.png)
+
+The row is now specified as `@` in the structured reference `Midterm[@[Score1]:[Score2]]`, which allows the `MAX()` function to operate on a per row basis. Once we hit enter, the formula will be automatically apply to each cell in the same column, enforcing the data consistency. 
+
+I would say the usage of `@` is not a true slicing by row name - after all, there is no row name or index in this syntax, but it is a good workaround and still helps us keep track of the data in a structured way.`MAX(Midterm[@[Score1]:[Score2]])` makes much more sense than `MAX(G4:H4)`. The also implies that if we want to manipulate the data for each row, we should just create an additional column. 
+
+> **In case you're wondering: Locate a Cell by Its Column and Row Names in Excel**
+>
+> Technically it is still be possible to locate a cell by its column and row names in Excel. After all as demonstrated in our examples, to locate a cell in a table we just have to slice twice. If we already have the ability to slice a table by its column name, we can further slice the list and locate a specific cell.
+>
+> However, the limitation of Excel formula, specifically [_array formula_](https://support.office.com/en-us/article/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7), makes it complicated to implement such an idea, which kind of defeats our purpose. We will walk through this idea in the [How to Find an Index](accessing-data-in-a-table.md#how-to-find-an-index) section, but just keep in mind that it's not very practical to do so in Excel.
+
+### Related Resources
+
+Once you start using table and structure references, it is very easy master the skills. I strongly recommend the official document [_Using structured references with Excel tables_](https://support.office.com/en-us/article/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e) as it provides a very detailed walkthrough on all the features.
+
+> **In case you're wondering: Writing Structured Formula outside of Excel**
+>
+> It is not uncommon to write formula outside of Excel when generating an Excel workbook in Python or R, and if that's the case for you, I have a not-so-good update: the package is unlikely to support the `@` specifier, and you might still have to use alphanumeric locator. I ran into errors when I tried this with the `pandas` / `xlsxwriter` packages in Python.
+>
+> One reason \(again, my wild guess\) is that the formula written externally to an Excel document is not calculated before the file is first run by Excel, and the `@` specifier requires that calculation right when it's assigned. Therefore, whenever we use `@` in an Excel table, the _real location_ is actually calculated and recorded in the configuration; if we just write `@` without that additional configuration, Excel would just see the `@` specifier in the formula as an error.
 
 ## How to _Find_ an Index?
 
