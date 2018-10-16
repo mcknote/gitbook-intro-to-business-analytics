@@ -10,7 +10,7 @@ The very first thing we will talk about is table. Table is so common, so powerfu
 
 ## Table Is a 2D Container of Data
 
-From a very high level, I think it's safe to say table is a 2-dimensional container of data. For example, a balance sheet that contains the asset, liability and equity information can be viewed as a table; an invoice you just got from a store, online or offline, that lists the item, quantity and price information, also contains a table. A table is generally a 2-dimensional container of data.
+From a very high level, I think it's safe to say table is a two-dimensional container of data. For example, a balance sheet that contains the asset, liability and equity information can be viewed as a table; an invoice you just got from a store, online or offline, that lists the item, quantity and price information, also contains a table. A table is generally a two-dimensional container of data.
 
 If we take a closer look at a table, it should always consist of three elements: **row**, **column**, and **cell**.
 
@@ -20,7 +20,7 @@ If we take a closer look at a table, it should always consist of three elements:
 
 Columns are the vertical dividers of a table, with a column name on the top, usually called as a header. Similarly, rows are the horizontal dividers of a table, and on the very left there is a row name, although sometimes ignored or simply put as a serial. 
 
-To put this in an Excel analogy, the _A, B, C, D, E_... you're seeing on the top of the table are the headers, while the _1, 2, 3, 4, 5_... on the left of the table are the row names; when you click on the A header, the area selected is a column, and if you click on the 1 row name, the area selected is a row. 
+To put this in an Excel analogy, the `A, B, C, D, E...` you're seeing on the top of the table are the headers, while the `1, 2, 3, 4, 5...` on the left of the table are the row names; when you click on the A header, the area selected is a column, and if you click on the 1 row name, the area selected is a row. 
 
 Naturally, the intersection between a row and a column is called a cell. A cell usually holds the _actual_ data we care about, and the column and row names help us interpret that data. 
 
@@ -77,9 +77,9 @@ To create a table, let's type in the data from our score example first.
 
 ### A Range with Data Is Not Yet a Table
 
-At the first glance, the data in the range from A1 to B4 looks exactly like a table. It has the columns, rows, and cells, and we can already use it to document and reference the data. But to apply what we have learned about a table, it is worth noting that we have not created a **table** yet - we have simply filled the data in a specific **range**.
+At the first glance, the data in the range `A1:B4` looks exactly like a table. It has the columns, rows, and cells, and we can already use it to document and reference the data. But to apply what we have learned about a table, it is worth noting that we have not created a **table** yet - we have simply filled the data in a specific **range**.
 
-The deciding difference between a range and a table is the structure, and the definition and requirement that comes with that structure. In our first try above, there is basically no structure to define what the columns and rows are, except the fact that we can tell them conventionally. As a result, Excel does not have a structured or computational way to read the data in a range. If we want to access to John's score, we could only refer to the cell B2, but _B2_ is just an arbitrary code in our range. It doesn't carry the meaning embedded in the column or row names.
+The deciding difference between a range and a table is the structure, and the definition and requirement that comes with that structure. In our first try above, there is basically no structure to define what the columns and rows are, except the fact that we can tell them conventionally. As a result, Excel does not have a structured or computational way to read the data in a range. If we want to access to John's score, we could only refer to the cell `B2`, but `B2` is just an arbitrary code in our range. It doesn't carry the meaning embedded in the column or row names.
 
 Lack of the structure also makes the range prone to human errors. Without the requirement, we could easily create "tables" that don't have the headers, or have duplicate headers. A table without proper structure can often cause confusion and rework, and mostly importantly, it usually misses out the capacity and efficiency a tool truly offers. So it is essential to create the table correctly at the beginning.
 
@@ -87,19 +87,19 @@ Although the discussion about table and range is within the scope of Excel's fun
 
 ### Converting a Range into a Table
 
-There are two ways I found in Excel to define a table: One is to use the _Table_ button on the Insert tab, and the other one is to directly set the format through the _Format as Table_ button on the Home tab. Both will generate the same result, and I personally prefer the second one as a shortcut.
+There are two ways I found in Excel to define a table: One is to use the `Table` button on the `Insert` tab, and the other one is to directly set the format through the `Format as Table` button on the `Home` tab. Both will generate the same result, and I personally prefer the second one as a shortcut.
 
 ![Method 1: Use the Table button in the Insert tab](../.gitbook/assets/what-is-a-table-excel-table-button.png)
 
 ![Method 2: Use the Format as Table button in the Home tab](../.gitbook/assets/what-is-a-table-excel-format-as-table.png)
 
-After creating the table, you may configure its name in the new Table tab. Needless to say I strongly recommend to assign a meaningful name for the ease of future reference, so here I assign a name "Score" to the table. You may also convert the table back to a range, as we will revisit the difference between range and table in more details.
+After creating the table, you may configure its name in the new Table tab. Needless to say, it is  strongly recommended to assign a meaningful name for the ease of future reference, so here I assign a name "Score" to the table. You may also convert the table back to a range, as we will revisit the difference between range and table in more details.
 
 ![The Table tab offers configuration to a table ](../.gitbook/assets/what-is-a-table-excel-table-tab.png)
 
 ### Difference between Range and Table
 
-The main difference between a range and a table, as explained, is the way we reference them. A range can only be referenced using arbitrary code such as _B4_, but a table can be referenced using the meaningful row and column names, which we will cover soon. It's also worth noting that the format is not a deciding factor here, as we could perfectly configure the header, filter and border of a range as well.
+The main difference between a range and a table, as explained, is the way we reference them. A range can only be referenced using arbitrary code such as `B4`, but a table can be referenced using the meaningful row and column names, which we will cover soon. It's also worth noting that the format is not a deciding factor here, as we could perfectly configure the header, filter and border of a range as well.
 
 The structure in a table also helps to ensure the data integrity, as shown in the comparison of the available functionalities below. 
 
@@ -174,7 +174,7 @@ score_3 = 94
 
 The code looks good as if we can read on and on to get the score of everybody, but what's missing here is the same element we were looking for in an Excel range - the structure that maintains data integrity. 
 
-What if we have to document the score for a hundred of students? How can we ensure the number after the underscore always matches? And in that sense, does the number even matter \(e.g. what if we assign Mike to \#3 and Ali to \#2\)? So there ought to be a structure like table to help us manage the data.
+What if we have to document the score for a hundred of students? How can we ensure the number after the underscore always matches? And in that sense, does the number even matter \(e.g. what if we assign Mike to `name_3` and Ali to `name_2`, and their scores respectively\)? So there ought to be a structure like table to help us manage the data.
 
 ### Creating a Data Frame
 
@@ -184,7 +184,7 @@ It turns out there are multiple ways to help us achieve this goal. One common wa
 2. Structure the data in a consumable way to the data frame function
 3. Apply the data frame function to return the object to our variable
 
-So an example in Python will be as follows. A little bit explanation for line 2: as Python is a versatile tool, we usually launch it without any additional packages and only import the necessary ones. Here we import the [_Python Data Analysis Library_](https://pandas.pydata.org), coded as **pandas**, into the console under the name "pd".
+So an example in Python will be as follows. A little bit explanation for line 2: as Python is a versatile tool, we usually launch it without any additional packages and only import the necessary ones. Here we import the [_Python Data Analysis Library_](https://pandas.pydata.org), coded as `pandas`, into the console under the name `pd`.
 
 {% code-tabs %}
 {% code-tabs-item title="table-3.py" %}
@@ -220,7 +220,7 @@ print(table_3)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Setting aside the new terms like the _list_ and _dictionary_ \(and I apologize for the confusion\), what we did in step two and three was nothing more than filling the data in a range, and click on the Table button in Excel. It follows the same process, and the goal, again, is to structure the data in a table.
+Setting aside the new terms like the `list` and `dictionary` \(and I apologize for the confusion\), what we did in step two and three was nothing more than filling the data in a range, and click on the Table button in Excel. It follows the same process, and the goal, again, is to structure the data in a table.
 
 One huge advantage to construct tables in Python or R is the flexible and powerful process we can build to process the data. These packages have so much more to offer than the built-in Excel functions, and it is also extremely efficient to execute the process with script, instead of drag-and-drops. 
 

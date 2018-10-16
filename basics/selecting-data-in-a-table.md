@@ -20,7 +20,7 @@ There are two ways of finding the data we want in a table: One is through its co
 | Mike | 88 |
 | Ali | 94 |
 
-From the user perspective, it is preferable to use the name approach for its **semantics** advantage, even though the name and the index approaches are usually interchangeable. After all, what we want is _the score of John_, not specific to any row or column index. Therefore, instead of using _B2_ or _row 1 column 2_, we should leverage the column and row names, and have the algorithm figure out the indexes. This was a point in the previous chapter [_What Is a Table?_](what-is-a-table.md).
+From the user perspective, it is preferable to use the name approach for its **semantics** advantage, even though the name and the index approaches are usually interchangeable. After all, what we want is _the score of John_, not specific to any row or column index. Therefore, instead of using `B2` or _row 1 column 2_, we should leverage the column and row names, and have the algorithm figure out the indexes. This was a point in the previous chapter [_What Is a Table?_](what-is-a-table.md).
 
 On the other hand, if we are not looking for specific data, it might be more succinct to just use the indexes. For example, if we want to add 10 points to everyone's score, it doesn't matter if we are selecting John or Ali's score - we just have to add 10 points to each of the selected score. This merit will become more obvious when designing the loop in Python or R. 
 
@@ -147,7 +147,7 @@ We can see from the first two steps that after selecting multiple elements in a 
 >
 > Index system is one of the fundamental differences between R and Python. Launched as a statistical language, R uses natural numbers as its index that starts with 1, while Python, a rather classical programming language, uses [non-negative integers](https://en.wikipedia.org/wiki/Integer_%28computer_science%29) as its index that starts with 0.
 >
-> So to access the first object in a list, in Python you would use 0 as the index, while in R you would use 1 as the index. We will cover the advanced indexing soon.
+> So to access the first object in a list, in Python you would use `0` as the index, while in R you would use `1` as the index. We will cover the advanced indexing soon.
 
 ## How to _Find_ an Index?
 
@@ -155,5 +155,5 @@ I hope the indexing and slicing process makes sense, except you might be wonderi
 
 ### Boolean Operators
 
-
+Boolean operators are the 
 
