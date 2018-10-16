@@ -194,11 +194,11 @@ I would say the usage of `@` is not a true slicing by row name - after all, ther
 >
 > Technically it is still be possible to locate a cell by its column and row names in Excel. After all as demonstrated in our examples, to locate a cell in a table we just have to slice twice. If we already have the ability to slice a table by its column name, we can further slice the list and locate a specific cell.
 >
-> However, the limitation of Excel formula, specifically [_array formula_](https://support.office.com/en-us/article/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7), makes it complicated to implement such an idea, which kind of defeats our purpose. We will walk through this idea in the [How to Find an Index](accessing-data-in-a-table.md#how-to-find-an-index) section, but just keep in mind that it's not very practical to do so in Excel.
+> However, the limitation of Excel formula, specifically [_array formula_](https://support.office.com/en-us/article/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7), makes it complicated to implement such an idea, which kind of defeats our purpose. We will walk through this idea in the [_How to Find an Index_](accessing-data-in-a-table.md#how-to-find-an-index) section, but just keep in mind that it's not very practical to do so in Excel.
 
 ### Related Resources
 
-Once you start using table and structure references, it is very easy master the skills. I strongly recommend the official document [_Using structured references with Excel tables_](https://support.office.com/en-us/article/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e) as it provides a very detailed walkthrough on all the features.
+Once you start using table and structure references, it is very easy master the skills. I strongly recommend the official document [_Using structured references with Excel tables_](https://support.office.com/en-us/article/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e) as it provides a very detailed walkthrough on all the features. It also helps me understand the limits and best practices of using the table feature.
 
 > **In case you're wondering: Writing Structured Formula outside of Excel**
 >
