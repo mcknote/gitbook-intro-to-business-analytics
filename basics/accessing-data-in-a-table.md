@@ -228,7 +228,9 @@ For those of you who have used Excel formula, especially `IF(cond, act_true, act
 
 For example, in Excel `=(3>5)` is a boolean operator that checks whether 3 is greater than 5, and the response `FALSE` would be a boolean data. If we want to evaluate multiple conditions at once like using `=AND((10>7), (11>9))`, the `AND(cond1, cond2,...)` function is called a **boolean operator**, and of course the response `TRUE` is another boolean data.
 
-We can use the boolean operator to combine multiple boolean data into a single boolean data, as we did with the `=AND((10>7), (11>9))` example. There are two boolean operators, `AND()` and `OR()`, and three unique combinations between `TRUE` and `FALSE`. They form six types of condition as shown in the following table.
+### Conditions
+
+We can use the boolean operator to combine multiple boolean data as a single condition, as we did with `=AND((10>7), (11>9))`. There are two boolean operators, `AND()` and `OR()`, and three unique combinations between `TRUE` and `FALSE`. They form six types of condition as shown in the following table.
 
 **The Combination of Boolean Data**
 
@@ -238,7 +240,7 @@ We can use the boolean operator to combine multiple boolean data into a single b
 | True, False | False | True |
 | False, False | False | False |
 
-Finally, we can **negate** a boolean data. In Excel we can use the function `=NOT()` to flip a boolean response. Using negation can help us adjust the condition. For example, if we want to execute a code when neither of the condition is true, we can just write `=NOT(OR(cond1, cond2))`, more succinct than its equivalence `=(AND(NOT(cond1), NOT(cond2)))`.
+Finally, we can **negate** a condition. In Excel we can use the function `=NOT()` to flip a boolean response. Using negation can help us adjust the condition. For example, if we want to execute a code when neither of the condition is true, we can just write `=NOT(OR(cond1, cond2))`, more succinct than its equivalence `=(AND(NOT(cond1), NOT(cond2)))`.
 
 
 
