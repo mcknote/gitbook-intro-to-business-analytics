@@ -263,13 +263,15 @@ Similarly, if we want to select both _Name_ and _Score_, we can jsut tweak the b
 >
 > This is obviously not the case with Python or R, as the equality sign can appear anywhere in the vast script. Therefore, both Python and R use double equality sign `==` for equality evaluation, and `=` exclusively for variable or argument assignment. The other operators: `>`, `<`, `>=`, `<=`, are exactly the same.
 
-### Filtering the Index
+### Filtering the Index with a Boolean List
 
 With the boolean list generated, this step should be fairly straightforward - we just have to filter the index whose corresponding evaluation result is true. This can be easily done in an Excel table.
 
 ![Using the IF function to filter results](../.gitbook/assets/accessing-data-in-a-table-filtering.png)
 
-In the screenshot we can see that by using a row-based `IF()` function, we can easily filter the index column by the boolean column. If the boolean is `TRUE`, the cell will reference the `Index` column on the same row; if not it will return an empy string. We can finally use the list of indexes to access the data in a table. Hurray!
+In the screenshot we can see that by using a row-based `IF()` function, we can easily filter the index column by the boolean column. If the boolean is `TRUE`, the cell will reference the `Index` column on the same row; if not it will return an empy string. 
+
+This is the full process of finding an index that belongs to a certain header. We can finally use the list of indexes to access the data in a table, hurray! It is also the same process for finding an element from any one-dimensional list.
 
 > **In case you're wondering: Vectorization**
 >
@@ -285,5 +287,9 @@ In the screenshot we can see that by using a row-based `IF()` function, we can e
 >
 > Most of the functions in popular packages should already be optimized through vectorization, so don't be worried if you don't feel familiar. Just keep in mind that code optimization is an ongoing effort, and there can be some better but less straightforward ways in processing the data.
 
+## After Locating the Data
 
+To sum up, name, index and boolean are the three most powerful tools to help us navigate through a table. Although they might seem counterintuitive at the beginning, they can hugely improve the efficiency and the semantics in the way we access the data, and eventually improve our sense of the table as well.
+
+With the ability to locate the data in a table, we can start to think about how we can manipulate the data. 
 
