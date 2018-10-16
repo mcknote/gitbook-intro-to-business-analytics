@@ -57,7 +57,7 @@ Technically we can still document and access all the data in both tables, just t
 
 One major difference is the readability. Suppose we have one hundred instead of three students, the first table would just extend vertically and we could still read or print, while the second table would extend horizontally and we would need to find a lengthy piece of paper to print it. 
 
-The other difference is the interpretation. In the second table, one lengthy row with many properties reads like we only have one instance that contains multiple properties, while the first table should have a better chance to show that we are presenting or comparing one property across multiple instances.
+The other difference is the interpretation. In the second table, one long row with many columns reads like we only have one instance that contains multiple properties, while the first table should have a better chance to show that we are presenting or comparing one property across multiple instances.
 
 In fact, most of the analytical tools I use, including Excel, distinguish between columns and rows very much and design their built-in functions by assuming columns are for variables and rows are for instances. So it usually will save a lot of time if you create or convert a table in such a fashion.
 
@@ -277,7 +277,7 @@ A violation of SoC might sometimes be the reason why an Excel workbook or a scri
 
 As we will gain more and more flexibility and capacity to build amazing processes around our data, it is important to keep the structured mindset: using the table \(and other data types\) to structure the data, using different steps to structure and processes and their toolsets, and using different concepts to structure the ever-changing landscape of business analytics.
 
-Thanks for reading through this lengthy note, and I wish the best for your journey in business analytics.
+Thanks for reading through this long note, and I wish the best for your journey in business analytics.
 
 Jimmy
 
