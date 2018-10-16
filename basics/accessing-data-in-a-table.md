@@ -234,11 +234,11 @@ We can use the boolean operator to combine multiple boolean data into a single b
 
 **The Combination of Boolean Data**
 
-| Condition | Operator: AND\(\) | Operator: OR\(\) |
+| Data | Operator: And | Operator: Or |
 | :--- | :--- | :--- |
-| TRUE, TRUE | TRUE | TRUE |
-| TRUE, FALSE | FALSE | TRUE |
-| FALSE, FALSE | FALSE | FALSE |
+| True, True | True | True |
+| True, False | False | True |
+| False, False | False | False |
 
 Finally, we can **negate** a boolean data. In Excel we can use the function `=NOT()` to flip a boolean response. Using negation can help us adjust the condition. For example, if we want to execute a code when neither of the condition is true, we can just write `=NOT(OR(cond1, cond2))`, more succinct than its equivalence `=(AND(NOT(cond1), NOT(cond2)))`.
 
