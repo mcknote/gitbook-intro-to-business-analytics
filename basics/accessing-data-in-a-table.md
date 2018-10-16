@@ -287,9 +287,9 @@ This is the full process of finding an index that belongs to a certain header. W
 >
 > Most of the functions in popular packages should already be optimized through vectorization, so don't be worried if you don't feel familiar. Just keep in mind that code optimization is an ongoing effort, and there can be some better but less straightforward ways in processing the data.
 
-## After Locating the Data
+## After Accessing the Data
 
-To sum up, name, index and boolean are the three most powerful tools to help us navigate through a table. Although they might seem counterintuitive at the beginning, they can hugely improve the efficiency and the semantics in the way we access the data, and eventually improve our sense of the table as well.
+To sum up, **name**, **index** and **boolean** are the three most powerful tools to help us navigate through a table. Although they might seem counterintuitive at the beginning, they can hugely improve the efficiency and the semantics in the way we access the data, and eventually improve our sense of the table as well.
 
-With the ability to locate the data in a table, we can start to think about how we can manipulate the data. 
+With the ability to locate the data in a table, we can start to think about how we can manipulate the data, either to summarize them \(e.g. taking the average\), or to convert them into a different format. We have covered almost everything we need to know to interact with a table; now we are ready to build processes around it and leverage the computational power.
 
