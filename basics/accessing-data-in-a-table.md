@@ -46,7 +46,7 @@ After understanding the two approaches to find a data, we can further break the 
 | 3 | Ali | 94 |
 {% endtab %}
 
-{% tab title="2 - Slide the table" %}
+{% tab title="2 - Slice the table" %}
 | Name | Score |
 | :--- | :--- |
 | John | 100 |
@@ -86,7 +86,7 @@ We can of course apply the same process to select multiple rows or columns. If w
 | **3** | **Ali** | **94** |
 {% endtab %}
 
-{% tab title="2 - Slide the table" %}
+{% tab title="2 - Slice the table" %}
 | Name | Score |
 | :--- | :--- |
 | Mike | 88 |
@@ -147,11 +147,31 @@ We can see from the first two steps that after selecting multiple elements in a 
 >
 > Index system is one of the fundamental differences between R and Python. Launched as a statistical language, R uses natural numbers as its index that starts with 1, while Python, a rather classical programming language, uses [non-negative integers](https://en.wikipedia.org/wiki/Integer_%28computer_science%29) as its index that starts with 0.
 >
-> So to access the first object in a list, in Python you would use `0` as the index, while in R you would use `1` as the index. We will cover the advanced indexing soon.
+> So to access the first object in a list, in Python you would use `0` as the index, while in R you would use `1` as the index. As usual, we will cover the advanced indexing after the Excel demo.
+
+### Comparison to Where We Started
+
+Although understanding the process of slicing and indexing can seem overwhelming, it is truly how we navigate through a \(3,2\), \(30, 20\) or even a \(3000, 2000\) table. When the data grows into _big data_, we can barely use the arbitrary locator like `B2` to find the data we want - we need to leverage the row names and column names. 
+
+And trust me, once you get used to this method, it will feel much more intuitive to locate the data using the name approach. The very moment you start wondering "_What is John's score?_", you will already be thinking about slicing the data. This second nature will apply to Excel, R, Python, SQL, and pretty much every data analytics tool you will encounter.
 
 ## How to _Find_ an Index?
 
-I hope the indexing and slicing process makes sense so far, except you might be wondering _how exactly do we find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table? To fill in this gap, let's talk about boolean expression, and how we can also use a list of boolean data to slice lists and tables.
+I hope the indexing and slicing process makes sense so far, except you might be wondering _how exactly do we find the index_? Specifically, how do we design a process that takes, for example, "Name" and returns the column index 2 in our table?
+
+### Evaluating and Filtering
+
+Simply put, the way the computer finds the index is to first evaluate the condition against each data point, and then filter the index that fit the condition. Following is an example how the computer would find "Name" among the headers.
+
+| Step | Action | Name | Score |
+| :--- | :--- | :--- | :--- |
+| 0 | Index the headers\* | 1 | 2 |
+| 1 | Compare each header with "Name" | **True** | False |
+| 2 | Filter the index | **1** | \(Null\) |
+
+_\*Index usually doesn't require manual assignment_
+
+This is the process under the hood that connects the name with the index, and I use this trick a lot to design processes. To illustarte how step 1 and 2 happened, let's talk about boolean expression, and how we can also use a list of boolean data to slice lists and tables.
 
 ### True and/or False
 
@@ -159,5 +179,17 @@ For those of you who have used Excel formula, especially `IF(cond, act_true, act
 
 For example, in Excel `=(3>5)` is a boolean operator that checks whether 3 is greater than 5, and the response `FALSE` would be a boolean data. If we want to evaluate multiple conditions at once like using `=AND((10>7), (11>9))`, the `AND(cond1, cond2,...)` function is called a **boolean operator**, and of course the response `TRUE` is another boolean data.
 
-We can also use boolean operators to conbine multiple boolean data. 
+We can use the boolean operator to combine multiple boolean data into a single boolean data, as we did with the `=AND((10>7), (11>9))` example. There are two boolean operators, `AND()` and `OR()`, and three unique combinations between `TRUE` and `FALSE`. They form six types of condition as shown in the following table.
+
+**The Combination of Boolean Data**
+
+| Condition | Operator: AND\(\) | Operator: OR\(\) |
+| :--- | :--- | :--- |
+| TRUE, TRUE | TRUE | TRUE |
+| TRUE, FALSE | FALSE | TRUE |
+| FALSE, FALSE | FALSE | FALSE |
+
+Finally, we can **negate** a boolean data. In Excel we can use the function `=NOT()` to flip a boolean response. Using negation can help us adjust the condition. For example, if we want to execute a code when neither of the condition is true, we can just write `=NOT(OR(cond1, cond2))`, more succinct than its equivalence `=(AND(NOT(cond1), NOT(cond2)))`.
+
+
 
