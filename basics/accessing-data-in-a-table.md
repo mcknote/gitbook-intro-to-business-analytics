@@ -280,6 +280,10 @@ In the screenshot we can see that by using a row-based `IF()` function, we can e
 > 1. Transpose the index matrix into a \(1,2\) matrix
 > 2. Concatenate the boolean matrix by itself into a \(2,2\) matrix
 > 3. Multiply the two matrices, \(1,2\) x \(2,2\). The result will be a \(1,2\) matrix.
+
+> **In case you're worrying: Vectorization**
 >
-> The slicing or indexing functions should already be optimized in this way, so don't be worried if you don't feel familiar. Just keep in mind that code optimization is an ongoing effort, and there can be some better but less straightforward ways in processing the data.
+> Most of the functions in popular packages should already be optimized through vectorization, so don't be worried if you don't feel familiar. Just keep in mind that code optimization is an ongoing effort, and there can be some better but less straightforward ways in processing the data.
+
+
 
