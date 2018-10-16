@@ -20,7 +20,7 @@ If we take a closer look at a table, it should always consist of three elements:
 
 Columns are the vertical dividers of a table, with a column name on the top, usually called as a header. Similarly, rows are the horizontal dividers of a table, and on the very left there is a row name, although sometimes ignored or simply put as a serial. 
 
-To put this in an Excel analogy, the `A, B, C, D, E...` you're seeing on the top of the table are the headers, while the `1, 2, 3, 4, 5...` on the left of the table are the row names; when you click on the A header, the area selected is a column, and if you click on the 1 row name, the area selected is a row. 
+To put this in an Excel analogy, the `A, B, C, D, E...` you're seeing on the top of the table are the headers, while the `1, 2, 3, 4, 5...` on the left of the table are the row names; when you click on the header `A`, the area selected is a column, and if you click on the row name `1`, the area selected is a row. 
 
 Naturally, the intersection between a row and a column is called a cell. A cell usually holds the _actual_ data we care about, and the column and row names help us interpret that data. 
 
@@ -31,6 +31,8 @@ So if I want to use a table to document my favorite snacks, it will looks as fol
 | 1 | A-Sha Dry Noodle | 3 | $10.99 |
 | 2 | Almdudler Soda | 4 | $24.16 |
 
+> **In case you're wondering: Column** _**No.**_
+>
 > You might be wondering "Why don't we just assign the _Item_ column as the row names"? Actually we could and that would increase the readability of this table a little bit. Here I decided to assign a separate column to illustrate the importance of the row numbers, and I will explain later why it might be a good idea sometimes.
 
 ### Difference between Rows and Columns
