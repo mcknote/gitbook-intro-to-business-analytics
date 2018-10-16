@@ -28,7 +28,9 @@ For now, just keep in mind that it is better to leverage the existing headers in
 
 ## Slicing and Indexing
 
- If we break the selection of John's score into steps, the process should look like this:
+After understanding the two approaches to find a data, we can further break the selection process of John's score into four steps as follows, to explain how to index and slice a table.
+
+### Table
 
 1. **Find the index** of the row where the "Name" data equals to "John"
 2. **Slice the table** using the row index
@@ -63,17 +65,17 @@ For now, just keep in mind that it is better to leverage the existing headers in
 {% endtab %}
 {% endtabs %}
 
+We can see that the selection process is basically a deletion process. We focus on the target one dimension at a time, and after two rounds, one for columns and the other one for rows, we can locate the data we were looking for.
+
 It is worth noting that in some packages, the end product from the fourth step is a \(1,1\) table, not the value itself, and would require an extra step to extract the data. But except the difference in data types, this is the standard way to locate a cell in a table - first get the index in one dimension, and that use that index to slice the table.
 
 > **In case you're wondering: Table/Matrix Notation \(r,c\)**
 >
-> When we refer to the size of a table, we will always the number of rows first, and then the number of columns. It is a convention from matrix, and the notation determines whether certain calculations are available between two matrices.
->
-> For example, we can multiply a \(1,**4**\) matrix with a \(**4**,1\) matrix, and get a \(1,1\) matrix; we can also multiply a \(4,**1**\) matrix by a \(**1**,4\) matrix and get a \(4,4\) matrix. But we can't do this with two \(1,4\) matrices, we can add or subtract them instead. Tables adopt this notation.
+> When we refer to the size of a table, we should always present the number of rows first, and then the number of columns. It is a convention from matrix, as the notation directly determines whether certain calculations are available between two matrices. Table adopts this convention.
 
 ### List
 
-We can of course use the same process to select multiple rows or columns. If I want to focus on Mike and Ali's score, either to compare or to calculate the average, I can first find the indexes of their rows, and then slice the table using those indexes.
+We can of course apply the same process to select multiple rows or columns. If we want to focus on Mike and Ali's score, either to compare or to calculate the average, I can first find the indexes of their rows, and then slice the table using those indexes.
 
 {% tabs %}
 {% tab title="1. Find the index" %}
