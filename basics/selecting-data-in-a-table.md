@@ -108,5 +108,36 @@ We can of course use the same process to select multiple rows or columns. If I w
 
 Again, depending on the data types, the end product we get from step four can be a \(2,1\) table, or a **list** with two elements. List is also a data structure that we can use to store and access data, except unlike table, it is not always two-dimensional; it is usually one-demensional as in this example, or can be nested into multi-dimensional. For now let's focus on the two-element list we got.
 
-The way to index and slice a list is exactly the same as the index approach to our table. 
+The way to index and slice a list is exactly the same as the index approach to our table: we first _find the index_ of the element\(s\), and then _slice the list_ using the index.
+
+{% tabs %}
+{% tab title="1. Find the index" %}
+| List Index | Element |
+| :--- | :--- |
+| **1** | **88** |
+| **2** | **94** |
+{% endtab %}
+
+{% tab title="2. Slice the list" %}
+| Element |
+| :--- |
+| 88 |
+| 94 |
+{% endtab %}
+
+{% tab title="3. Find the index" %}
+| List Index | Element |
+| :--- | :--- |
+| **1** | **88** |
+| 2 | 94 |
+{% endtab %}
+
+{% tab title="4. Slice the list" %}
+| Element |
+| :--- |
+| 88 |
+{% endtab %}
+{% endtabs %}
+
+
 
